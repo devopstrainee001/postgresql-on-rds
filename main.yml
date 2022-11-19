@@ -1,0 +1,8 @@
+---
+- name: Creating postgresql database instance
+  hosts: localhost
+  connection: local
+  gather_facts : false
+  roles:
+    - psql-rds-install
+

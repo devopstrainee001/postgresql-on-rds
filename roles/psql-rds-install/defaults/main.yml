@@ -1,0 +1,52 @@
+---
+
+### RDS subnet Group Parameters ###
+
+subnet_group_name: "rds-subnet-group"
+subnet_group_description: "Creating Subnet Group"
+subnets_1: "subnet-04fc93e776f37deb5"
+subnets_2: "subnet-0cbef3c833a882191"
+
+### Parameter group variables for PostgreSQl  ###
+
+db_parameter_group_name: "para-postgres-14"
+para_group_description: "Creating parametergroup"
+para_engine: "postgres14"
+
+### RDS PostgreSQL variables ###
+
+allocated_storage: 100
+iops: 3000
+instance_class: "db.t3.xlarge" 
+instance_identifier: "my-postgres-db-instance1"
+#subnet_group_name: "default" 
+db_engine: "postgres"
+db_engine_version: "14.5"
+db_name: testdb
+master_passwd: "rootroot"
+master_username: "root"
+max_allocated_storage: 100
+port: "5432"
+license_model: "postgresql-license"
+region: "ap-south-1"
+storage_type: "io1"
+iops: 3000
+vpc_security_group_id: "sg-0b27a3e4ba4eae927"
+multi_az: "true"
+publicly_accessible: "no"
+storage_encrypted: "true"
+kms_key_id: "e5b913d0-e53a-43ca-9f9c-13862852ca89"
+#db_parameter_group_name: "default.sqlserver-se-15.0"
+auto_minor_version_upgrade: "yes" 
+apply_immediately: "yes"
+wait: "yes"
+enable_iam_database_authentication: "no"
+debug_botocore_endpoint_logs: "no"
+deletion_protection: "no"
+force_failover: "no"
+read_replica: "no"
+copy_tags_to_snapshot: "yes"
+allow_major_version_upgrade: "yes"
+skip_final_snapshot: "no"
+backup_retention_period: 7 
+
